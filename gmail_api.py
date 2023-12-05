@@ -6,6 +6,12 @@ from google.auth.transport.requests import Request
 import base64
 from bs4 import BeautifulSoup
 
+import webbrowser
+
+url = "https://www.google.com"
+edge_path = "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+webbrowser.register("edge", None, webbrowser.BackgroundBrowser(edge_path))
+
 # Set up the Gmail API
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 creds = None
